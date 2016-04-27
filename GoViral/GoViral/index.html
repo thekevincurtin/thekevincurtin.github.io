@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <style>
+      rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;
+      }
+
+      text.mono {
+        font-size: 9pt;
+        font-family: Consolas, courier;
+        fill: #aaa;
+      }
+
+      text.axis-workweek {
+        fill: #000;
+      }
+
+      text.axis-worktime {
+        fill: #000;
+      }
+    </style>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <script src="http://d3js.org/d3.v3.js"></script>
+  </head>
+  <body>
+    <!-- hidden divs -->
+    <div id='hoverState' style='visibility:hidden'>"none"</div>
+    <div id='hiddenYear' style='visibility:hidden' value="2008">2008</div>
+    <div id="filters"></div>
+    <div id="tooltip"></div>
+  <!-- this code will center the chloropleth, but I can't get the heatmap to be centered under it-
+	<svg style="display:block;margin-left:auto;margin-right:auto;margin-top:-50px" width="960" height="600" id="statesvg"></svg>
+  Use fixed margins instead for 1080p  -->
+  <svg style="margin-left:480px;margin-top:-50px" width="960" height="600" id="statesvg"></svg>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+	<script src="uStates.js"></script>
+	<script src="chloropeth.js"></script>
+    <div style="margin-left:460px">
+        <table>
+            <tr>
+              <div style="font-family:Helvetica" id='HITshow'></div>
+            </tr>
+            <tr>
+                <td><div class='color box0'></div></td>
+                <td><div class='color box1'></div></td>
+                <td><div class='color box2'></div></td>
+                <td><div class='color box3'></div></td>
+                <td><div class='color box4'></div></td>
+                <td><div class='color box5'></div></td>
+                <td><div class='color box6'></div></td>
+            </tr>
+            <tr style="font-family:Helvetica">
+                <td><div>N/A</div></td>
+                <td><div> </div></td>
+                <td><div>-6%</div></td>
+                <td><div>-3%</div></td>
+                <td><div>0%</div></td>
+                <td><div>+3%</div></td>
+                <td><div>+6%</div></td>
+            </tr>
+        </table>
+    </div>
+    <!-- heatmap -->
+    <div id="space" style="padding:5px"></div>
+    <div id="selectors"  style="margin-left:460px">
+      <select id="mode">
+        <option value="State">State</option>
+        <option value="Gender">Gender</option>
+        <option value="Race">Race</option>
+        <option value="Month">Monthly</option>
+      </select>
+      <select id="disease">
+        <option value="Diphtheria">Diphtheria</option>
+        <option value="Haemophilus influenzae">Haemophilus influenzae</option>
+        <!-- <option value="Hepatitis A">Hepatitis A</option> -->
+        <option value="Hepatitis B">Hepatitis B</option>
+        <!-- <option value="Human papillomavirus">Human papillomavirus</option> -->
+        <option value="Measles">Measles</option>
+        <option value="Meningococcal disease">Meningococcal disease</option>
+        <option value="Mumps">Mumps</option>
+        <option value="Pertussis">Pertussis</option>
+        <option value="Pneumococcal disease">Pneumococcal disease</option>
+        <option value="Polio">Polio</option>
+        <!-- <option value="Rotavirus">Rotavirus</option> -->
+        <option value="Rubella">Rubella</option>
+        <!-- <option value="Tetanus">Tetanus</option> -->
+        <option value="Varicella">Varicella</option>
+      </select>
+      <select id="year">
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+      </select>
+      <button id="filter">Filter</button>
+      <button id='play'>Play</button>
+    </div>
+    <!-- adjust this margin based on the current heatmap view-->
+    <div id="heatmap-container" width="100%" style="margin-left:0px">
+      <div id="heatmap-description" style="margin-left:50px;margin-top:15px;font-family:Helvetica">Number of infections</div>    
+      <div id="chart"></div>
+    </div>
+    <script src="heatmap.js"></script>
+  </body>
+</html>
