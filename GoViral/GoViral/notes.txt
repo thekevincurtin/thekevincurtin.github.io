@@ -1,4 +1,0 @@
-State vs Year
-Gender vs Year 
-Race vs Year
-Disease vs Month
