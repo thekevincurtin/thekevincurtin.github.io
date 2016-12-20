@@ -38,6 +38,7 @@
 ------------------------------------------------------*/
 
 	var sections = $("section");
+    console.log(sections);
 	var navigation_links = $("#nav-wrap a");
 
 	sections.waypoint({
