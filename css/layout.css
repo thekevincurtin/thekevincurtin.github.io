@@ -11,7 +11,8 @@
    c. About Section
    d. Resume Section
    d2. Education Section
-   e. projects Section
+   d3. Awards Section
+   e. Projects Section
    f. Call To Action Section
    g. Testimonials Section
    h. Contact Section
@@ -286,7 +287,7 @@ ul#nav li.current a { color: #F06000; }
 
 
 /* ------------------------------------------------------------------ */
-/* d. Education Section
+/* d2. Education Section
 /* ------------------------------------------------------------------ */
 
 #education {
@@ -316,7 +317,7 @@ ul#nav li.current a { color: #F06000; }
 #education .header-col { padding-top: 9px; }
 #education .main-col { padding-right: 10%; }
 
-.education, .work {
+.education, .work, .awards {
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
@@ -332,6 +333,57 @@ ul#nav li.current a { color: #F06000; }
    margin-left: 5px;
 }
 #education .date {
+   font: 15px/24px 'opensans-regular', sans-serif;
+   margin-top: 6px;
+}
+
+/* ------------------------------------------------------------------ */
+/* d3. Awards Section
+/* ------------------------------------------------------------------ */
+
+#awards {
+   background: #fff;
+   padding-top: 90px;
+   padding-bottom: 72px;
+   overflow: hidden;
+   margin-bottom: -120px; /*for section changes*/
+}
+
+#awards a, #awards a:visited  { color: #11ABB0; }
+#awards a:hover, #awards a:focus { color: #313131; }
+
+#awards h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+#awards h1 span {
+   border-bottom: 3px solid #11ABB0;
+   padding-bottom: 6px;
+}
+#awards h3 {
+   font: 25px/30px 'opensans-bold', sans-serif;
+}
+
+#awards .header-col { padding-top: 9px; }
+#awards .main-col { padding-right: 10%; }
+
+.awards, .work {
+   margin-bottom: 48px;
+   padding-bottom: 24px;
+   border-bottom: 1px solid #E8E8E8;
+}
+#awards .info {
+   font: 16px/24px 'librebaskerville-italic', serif;
+   color: #6E7881;
+   margin-bottom: 18px;
+   margin-top: 9px;
+}
+#awards .info span {
+   margin-right: 5px;
+   margin-left: 5px;
+}
+#awards .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
 }
